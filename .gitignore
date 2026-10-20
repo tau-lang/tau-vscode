@@ -1,3 +1,7 @@
 node_modules
 *.vsix
 .env
+
+## Flakes
+result
+.pre-commit-config.yaml
