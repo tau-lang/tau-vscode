@@ -1,0 +1,47 @@
+{
+  "name": "tau",
+  "displayName": "Tau Syntax Highlighter",
+  "description": "Syntax highlighting support for the experimental Tau language.",
+  "version": "0.0.1",
+  "publisher": "tau-lang",
+  "repository": "https://codeberg.org/tau-lang/tau-vscode",
+  "engines": {
+    "vscode": "^1.140.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "tau",
+        "aliases": [
+          "Tau",
+          "tau"
+        ],
+        "extensions": [
+          ".tau"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "tau",
+        "scopeName": "text.tau",
+        "path": "./syntaxes/tau.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "tau",
+        "path": "./snippets/tau.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/vscode": "^1.140.0",
+    "typescript": "^7.0.2"
+  }
+}

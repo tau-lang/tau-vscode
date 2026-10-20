@@ -1,0 +1,104 @@
+{
+    "scopeName": "text.tau",
+    "patterns": [
+      {
+        "name": "meta.function.tau",
+        "match": "\\bfn\\s+([A-Za-z_][A-Za-z0-9_]*)",
+        "captures": {
+          "0": { "name": "keyword.control.tau" },
+          "1": { "name": "entity.name.function.tau" }
+        }
+      },
+      {
+        "name": "meta.struct.tau",
+        "match": "\\bstruct\\s+([A-Za-z_][A-Za-z0-9_]*)",
+        "captures": {
+          "0": { "name": "keyword.control.tau" },
+          "1": { "name": "entity.name.type.tau" }
+        }
+      },
+      {
+        "match": "\\b([A-Za-z_][A-Za-z0-9_]*)(\\s*):(\\s*)([A-Za-z_][A-Za-z0-9_]*)",
+        "captures": {
+          "1": {
+            "name": "variable.other.tau"
+          },
+          "3": {
+            "name": "punctuation.separator.type-annotation.tau"
+          },
+          "4": {
+            "name": "entity.name.type.tau"
+          }
+        }
+      },
+      {
+        "match": "\\b(let)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+        "captures": {
+          "1": { "name": "keyword.control.tau" },
+          "2": { "name": "variable.other.tau" }
+        }
+      },
+      {
+        "match": "\\b(const)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+        "captures": {
+          "1": { "name": "storage.modifier.tau" },
+          "2": { "name": "constant.other.tau" }
+        }
+      },
+      {
+        "name": "string.quoted.double",
+        "begin": "\"",
+        "end": "\"",
+        "patterns": [
+          {
+            "name": "constant.character.escape",
+            "match": "\\\\."
+          }
+        ]
+      },
+      {
+        "name": "keyword.control.tau",
+        "match": "\\b(if|else|while|for|return|let|in|fn|struct)\\b"
+      },
+      {
+        "name": "keyword.operator.tau",
+        "match": "==|!=|<=|>=|->|[+*/%=<>!-]"
+      },
+      {
+        "name": "storage.modifier.tau",
+        "match": "\\b(extern|const|io)\\b"
+      },
+      {
+        "name": "constant.language.tau",
+        "match": "\\b(true|false)\\b"
+      },
+      {
+        "name": "variable.language.tau",
+        "match": "\\b(self)\\b"
+      },
+      {
+        "name": "constant.numeric",
+        "match": "\\b[+-]?[0-9]+(\\.[0-9]+)?\\b"
+      },
+      {
+        "name": "entity.name.type.tau",
+        "match": "\\b(?:[ui](?:8|16|32|64)|f(?:32|64)|str|any)\\b"
+      },
+      {
+        "name": "entity.name.function.tau",
+        "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
+      },
+      {
+        "name": "constant.other.tau",
+        "match": "\\b[A-Z][A-Z0-9_]*\\b"
+      },
+      {
+        "name": "entity.name.type.tau",
+        "match": "\\b[A-Z][A-Za-z0-9_]*\\b"
+      },
+      {
+        "name": "variable.other.tau",
+        "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b"
+      }
+    ]
+  }

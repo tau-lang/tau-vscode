@@ -1,0 +1,91 @@
+{
+    "Function definition": {
+        "prefix": "fn",
+        "body": [
+            "fn ${1:name}(${2:args}) -> ${3:Type} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Define a function"
+    },
+    "Extern function": {
+        "prefix": "externfn",
+        "body": [
+            "extern fn ${1:name}(${2:args}) -> ${3:Type} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Declare an external function"
+    },
+    "IO function": {
+        "prefix": "iofn",
+        "body": [
+            "io fn ${1:name}(${2:args}) -> ${3:Type} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Declare an io function"
+    },
+    "Main function": {
+        "prefix": "main",
+        "body": [
+            "io fn main() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create the main function"
+    },
+    "Struct definition": {
+        "prefix": "struct",
+        "body": [
+            "struct ${1:Name} {",
+            "\t${2:field}: ${3:Type}",
+            "}"
+        ],
+        "description": "Define a struct"
+    },
+    "Let binding": {
+        "prefix": "let",
+        "body": "let ${1:name} = ${2:value};",
+        "description": "Declare a local variable"
+    },
+    "Let-In binding": {
+        "prefix": "letin",
+        "body": [
+            "let",
+            "\t${1:name} = ${2:value};",
+            "in",
+            "\t$0"
+        ],
+        "description": "Declare a local variable"
+    },
+    "If statement": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create an if statement"
+    },
+    "If-Else statement": {
+        "prefix": "ifelse",
+        "body": [
+            "if ${1:condition} {",
+            "\t$0",
+            "} else {",
+            "\t$1",
+            "}"
+        ],
+        "description": "Create an if-else statement"
+    },
+    "While statement": {
+        "prefix": "while",
+        "body": [
+            "while ${1:condition} {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create a while statement"
+    }
+}
